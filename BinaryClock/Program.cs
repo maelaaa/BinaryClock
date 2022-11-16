@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +22,9 @@ namespace BinaryClock
             m = int.Parse(time.ToString(tokens[1]));
             s = int.Parse(time.ToString(tokens[2]));
 
-            Console.Write("h: "); binary(h);
-            Console.Write("m: "); binary(m);
-            Console.Write("s: "); binary(s);
+            binary(h); Console.Write(":");
+            binary(m); Console.Write(":");
+            binary(s); Console.WriteLine(); 
         }
         private static void binary(int n)
         {
@@ -46,7 +46,6 @@ namespace BinaryClock
             {
                 Console.Write(stack.Pop());
             }
-            Console.WriteLine();
         }
     }
     
